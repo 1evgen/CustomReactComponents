@@ -1,0 +1,31 @@
+
+.CommonPalette{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+.dashboard{
+
+}
+.InfoDashboard{
+    display: flex;
+    flex-direction: column;
+}
+.titleDashboard{
+   margin: 0 auto;
+}
+.description{
+
+}
+.containerButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid black;
+    max-width: 600px;
+    min-height: 150px;
+
+
+}

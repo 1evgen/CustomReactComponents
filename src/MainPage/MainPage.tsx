@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useTheme } from '@mui/material/styles';
+import {useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,12 +10,12 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import {CustomButton} from "../Components/CustomButton/CustomButton";
+import {ButtonPalette} from "../Components/ButtonPalette/ButtonPalette";
 import s from './mainPage.module.css'
 import {ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
 import {Link, Navigate, Route, Routes} from "react-router-dom";
-import {Preview} from "../Preview";
-import {AppBar, drawerWidth, DrawerHeader,Main} from "./StylesForAppBar";
+import {Preview} from "../Components/Preview/Preview";
+import {AppBar, drawerWidth, DrawerHeader, Main} from "./StylesForAppBar";
 import CottageIcon from '@mui/icons-material/Cottage';
 import SmartButtonIcon from '@mui/icons-material/SmartButton';
 
@@ -33,8 +33,8 @@ export default function MainPage() {
     };
 
     return (
-        <Box sx={{ display: 'flex' }}>
-            <CssBaseline />
+        <Box sx={{display: 'flex'}}>
+            <CssBaseline/>
             <AppBar position="fixed" open={open}>
                 <Toolbar>
                     <IconButton
@@ -42,9 +42,9 @@ export default function MainPage() {
                         aria-label="open drawer"
                         onClick={handleDrawerOpen}
                         edge="start"
-                        sx={{ mr: 10, ...(open && { display: 'none' }) }}
+                        sx={{mr: 10, ...(open && {display: 'none'})}}
                     >
-                        <MenuIcon />
+                        <MenuIcon/>
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
                         Custom Components
@@ -66,36 +66,36 @@ export default function MainPage() {
             >
                 <DrawerHeader>
                     <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                        {theme.direction === 'ltr' ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
                     </IconButton>
                 </DrawerHeader>
                 <List>
                     <Link className={s.links} to={'/preview'}>
                         <ListItemButton>
                             <ListItemIcon>
-                                <CottageIcon />
+                                <CottageIcon/>
                             </ListItemIcon>
-                            <ListItemText  primary= 'Preview'  />
+                            <ListItemText primary='Preview'/>
                         </ListItemButton>
                     </Link>
                 </List>
                 <List>
-                    <Link className={s.links} to={'/button'}>
-                    <ListItemButton>
-                                        <ListItemIcon>
-                                           <SmartButtonIcon/>
-                                        </ListItemIcon>
-                                        <ListItemText  primary= 'Custom Button'  />
-                                    </ListItemButton>
+                    <Link className={s.links} to={'/ButtonPalette'}>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <SmartButtonIcon/>
+                            </ListItemIcon>
+                            <ListItemText primary='Button Palette'/>
+                        </ListItemButton>
                     </Link>
                 </List>
             </Drawer>
             <Main className={s.mainStyle} open={open}>
-                    <Routes >
-                        <Route path={'/'} element={<Navigate to={'/preview'}/>} />
-                        <Route path={'/button'} element={<CustomButton/>}/>
-                        <Route path={'/preview'} element={<Preview/>}/>
-                    </Routes>
+                <Routes>
+                    <Route path={'/'} element={<Navigate to={'/preview'}/>}/>
+                    <Route path={'/preview'} element={<Preview/>}/>
+                    <Route path={'/ButtonPalette'} element={<ButtonPalette />}/>
+                </Routes>
             </Main>
         </Box>
     );

@@ -5,8 +5,8 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import {CustomButton} from "../Components/CustomButton/CustomButton";
-import {Preview} from "../Preview";
+import {Preview} from "../Components/Preview/Preview";
+import {ButtonPalette} from "../Components/ButtonPalette/ButtonPalette";
 
 
 
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
     },
 
     {
-        path: "/button" as 'Button',
-        element: <CustomButton />,
+        path: "/ButtonPalette",
+        element: <ButtonPalette />,
     },
 ]);
 
