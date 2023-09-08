@@ -18,7 +18,8 @@ import {Preview} from "../Components/Preview/Preview";
 import {AppBar, drawerWidth, DrawerHeader, Main} from "./StylesForAppBar";
 import CottageIcon from '@mui/icons-material/Cottage';
 import SmartButtonIcon from '@mui/icons-material/SmartButton';
-
+import {SelectExample} from "../Components/Select/SelectExsample";
+import GradingIcon from '@mui/icons-material/Grading';
 
 export default function MainPage() {
     const theme = useTheme();
@@ -89,12 +90,23 @@ export default function MainPage() {
                         </ListItemButton>
                     </Link>
                 </List>
+                <List>
+                    <Link className={s.links} to={'/select'}>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <GradingIcon/>
+                            </ListItemIcon>
+                            <ListItemText primary='Select'/>
+                        </ListItemButton>
+                    </Link>
+                </List>
             </Drawer>
             <Main className={s.mainStyle} open={open}>
                 <Routes>
                     <Route path={'/'} element={<Navigate to={'/preview'}/>}/>
                     <Route path={'/preview'} element={<Preview/>}/>
                     <Route path={'/ButtonPalette'} element={<ButtonPalette />}/>
+                    <Route path={'/select'} element={<SelectExample />}/>
                 </Routes>
             </Main>
         </Box>
