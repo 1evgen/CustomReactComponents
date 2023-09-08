@@ -1,0 +1,20 @@
+
+.iconsStyle{
+    max-width: 50px;
+    width: 100%;
+
+}
+
+.img_style{
+    border-radius: 50px;
+    cursor: pointer;
+    border: none; /* Убираем границы */
+    background: none; /* Убираем фон */
+    padding: 10px; /* Убираем отступы */
+
+}
+
+.img_style:hover{
+    background-color: #f6f5f5;
+    border-radius: 100px;
+}

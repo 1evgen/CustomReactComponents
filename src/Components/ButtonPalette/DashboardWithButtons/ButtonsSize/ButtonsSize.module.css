@@ -1,0 +1,38 @@
+
+.default{
+    padding: 3px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 5px;
+}
+
+.small, .medium, .large{
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.small{
+    font-size: 12px;
+    padding: 2px;
+    max-width: 50px;
+}
+
+.medium{
+    font-size: 15px;
+    padding: 5px;
+    max-width: 90px;
+}
+.large{
+    font-size: 18px;
+    padding: 8px;
+    max-width: 90px;
+}
+
+

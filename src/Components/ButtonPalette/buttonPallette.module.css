@@ -3,10 +3,14 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid black;
+    align-items: center;
+
 }
 
 .dashboard{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .InfoDashboard{
     display: flex;
@@ -20,12 +24,12 @@
 }
 .containerButtons{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 40px;
+
     border: 1px solid black;
-    max-width: 600px;
+    max-width: 1200px;
+    width: 100%;
     min-height: 150px;
-
-
+    margin-bottom: 150px;
 }

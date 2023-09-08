@@ -1,0 +1,55 @@
+.default{
+    padding: 3px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 80px;
+    background-color: seashell;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 5px;
+}
+
+
+
+.primary, .secondary, .success, .error{
+    color: seashell;
+}
+.primary{
+    background-color: #0783d2;
+}
+.primary:hover{
+    background-color: #0971a8;
+
+}
+
+.secondary{
+    background-color: #973398;
+
+}
+.success{
+    background-color: green;
+
+}
+.error{
+    background-color: red;
+}
+
+.disabled{
+    background-color: #c9c9c9;
+    color: #7e7e7e;
+
+}
+
+
+.iconStyle{
+    border-radius: 100px;
+    cursor: pointer;
+    border: none; /* Убираем границы */
+    background: none; /* Убираем фон */
+    padding: 10px; /* Убираем отступы */
+}
+.iconStyle:hover{
+    background-color: #f6f5f5;
+    border-radius: 100px;
+}
