@@ -18,7 +18,7 @@ import {Preview} from "../Components/Preview/Preview";
 import {AppBar, drawerWidth, DrawerHeader, Main} from "./StylesForAppBar";
 import CottageIcon from '@mui/icons-material/Cottage';
 import SmartButtonIcon from '@mui/icons-material/SmartButton';
-import {SelectExample} from "../Components/Select/SelectExsample";
+import {SelectPalette} from "../Components/Select/SelectPalette";
 import GradingIcon from '@mui/icons-material/Grading';
 
 export default function MainPage() {
@@ -106,7 +106,7 @@ export default function MainPage() {
                     <Route path={'/'} element={<Navigate to={'/preview'}/>}/>
                     <Route path={'/preview'} element={<Preview/>}/>
                     <Route path={'/ButtonPalette'} element={<ButtonPalette />}/>
-                    <Route path={'/select'} element={<SelectExample />}/>
+                    <Route path={'/select'} element={<SelectPalette />}/>
                 </Routes>
             </Main>
         </Box>

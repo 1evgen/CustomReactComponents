@@ -1,9 +1,17 @@
-.Select{
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.select{
     width: 150px;
     height: 40px;
     font-size: 15px;
+    margin:50px 0 50px 0;
 }
 
 .selectedDesertLabel {
     margin-bottom: 10px;
 }
+
+

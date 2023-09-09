@@ -7,8 +7,7 @@ import {
 import "./index.css";
 import {Preview} from "../Components/Preview/Preview";
 import {ButtonPalette} from "../Components/ButtonPalette/ButtonPalette";
-import {Select} from "@mui/material";
-import {SelectExample} from "../Components/Select/SelectExsample";
+import {SelectPalette} from "../Components/Select/SelectPalette";
 
 
 
@@ -25,7 +24,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/select",
-        element: <SelectExample />,
+        element: <SelectPalette />,
     },
 ]);
 
