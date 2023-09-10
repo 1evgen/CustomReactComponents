@@ -3,8 +3,8 @@ import React from "react";
 import style from "./DescriptionsDashboard.module.css"
 
 type DescriptionDashboardType = {
-    title: string
-    description: string
+    title?: string
+    description?: string
 }
 
 export const DescriptionDashboard = (props: DescriptionDashboardType)=> {

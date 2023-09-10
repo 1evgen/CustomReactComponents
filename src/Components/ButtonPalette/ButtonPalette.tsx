@@ -81,7 +81,7 @@ export const ButtonPalette = () => {
             <IconsButton header={"Dashboard icons Button"}
                          descriptions={descriptionIconsButton}
                          propertiesButtons={propertiesButtons} />
-            <SizeIcons   header={'test'}
+            <SizeIcons   header={'Icons size'}
                          descriptions={descriptionIconsSize}
                          propertiesButtons={propertiesButtons} />
         </div>
