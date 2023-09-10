@@ -2,12 +2,13 @@
 import React, { ChangeEvent, useState } from "react";
 import style from './SelectReact.module.css';
 import {DescriptionDashboard} from "../../../CommonComponents/DescriptionDashboard";
-import {SelectComponentProps} from "../SelectPalette";
+import {BoardType} from "../SelectPalette";
+
 
 type DesertListType = 'chocolate' | 'strawberry' | 'vanilla';
 
 type SelectMUIType = {
-    description: SelectComponentProps<"ReactSelect">
+    description: BoardType
 };
 
 export const SelectReact: React.FC<SelectMUIType> = ({
@@ -25,8 +26,8 @@ export const SelectReact: React.FC<SelectMUIType> = ({
     };
 
     return (
-        <div>
-            <DescriptionDashboard />
+        <div className={style.reactSelect}>
+            <DescriptionDashboard title={description.title} description={description.description} />
             <div className={style.selectWrapper}>
                 <select
                         className={style.select}

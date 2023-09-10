@@ -1,22 +1,23 @@
 import React, {useEffect, useState} from "react";
 import "./DropdownSelect.css";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import {OptionType} from "../SelectPalette";
+import {BoardType, OptionType} from "../SelectPalette";
 import style from "../SelectReact/SelectReact.module.css";
 import {DescriptionDashboard} from "../../../CommonComponents/DescriptionDashboard";
 type DropdownSelectType = {
     placeHolder: string
     option: Array<OptionType>
+    description: BoardType
 }
 
 export const DropdownSelect: React.FC<DropdownSelectType> = ({
                                                                  placeHolder,
-                                                                 option
+                                                                 option,
+                                                                 description
                                                              })=> {
 
     const [showMenu, setShowMenu] = useState(false)
     const [selectedValue, setSelectedValue]= useState<OptionType | null>(null)
-
 
     // left click anywhere and the list will be hidden
     useEffect(()=> {
@@ -57,6 +58,8 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
 
 
     return (
+        <div className={'custom-select'}>
+        <DescriptionDashboard title={description.title} description={description.description}/>
         <div className="dropdown-container">
             <div onClick={handlerInputClick} className="dropdown-input">
                 <div className="dropdown-selected-value">{getDisplay()}</div>
@@ -79,7 +82,6 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
                 </div>
             }
         </div>
-
+        </div>
     )
-
 }

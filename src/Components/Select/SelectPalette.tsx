@@ -8,25 +8,23 @@ export type OptionType = {
     label: string
 }
 
-type DescriptionType<D> = {
-    title: string;
-    description: string;
-};
+export type BoardType = {
+    title: string
+    description: string
+}
 
-export type SelectComponentProps<D> = {
-    description: DescriptionType<D>;
-};
-
+type DescriptionBoardType = {
+    ReactSelect: BoardType
+    CustomSelect: BoardType
+}
 
 export const SelectPalette = ()=> {
-    const description = {
+    const description: DescriptionBoardType = {
         ReactSelect: {title: 'React select example',
-            description:"This is the first step to understanding how a select element works in React." +
-            " It may seem easy, but it's important to understand"},
+            description:"This is the first step to understanding how a select element works in React."},
         CustomSelect: {
             title: 'Custom dropdown example',
-            description:"This is the first step to understanding how a select element works in React." +
-                " It may seem easy, but it's important to understand"
+            description:" The custom select. We can use dropdown, filter for value un select"
         }
     }
 
@@ -40,12 +38,13 @@ export const SelectPalette = ()=> {
     ]
 
 
-
-
     return (
         <div className={style.container} >
                 <SelectReact description={description.ReactSelect}  />
-                <DropdownSelect placeHolder="Select ..." option={option}  />
+                <DropdownSelect placeHolder="Select ..."
+                                option={option}
+                                description={description.CustomSelect}
+                />
         </div>
     )
 }

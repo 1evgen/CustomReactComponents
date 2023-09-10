@@ -2,17 +2,21 @@
     display: flex;
 
 }
+.custom-select{
+    display: flex;
+    flex-direction: column;
 
-
+}
 .dropdown-container {
+    margin: 20px auto;
     text-align: left;
     border: 1px solid #ccc;
     position: relative;
     border-radius: 5px;
+    width: 50%;
 }
 
 .dropdown-input {
-
     padding: 5px;
     display: flex;
     align-items: center;

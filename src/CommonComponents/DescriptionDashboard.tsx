@@ -2,14 +2,18 @@
 import React from "react";
 import style from "./DescriptionsDashboard.module.css"
 
-export const DescriptionDashboard = ()=> {
+type DescriptionDashboardType = {
+    title: string
+    description: string
+}
+
+export const DescriptionDashboard = (props: DescriptionDashboardType)=> {
     return (
     <div>
             <div className={style.selectContainer}>
                 <div className={style.description}>
-                    <h3>React select example</h3>
-                    <p>This is the first step to understanding how a select element works in React.
-                        It may seem easy, but it's important to understand.</p>
+                    <h3>{props.title}</h3>
+                    <p>{props.description}</p>
 
                 </div>
         </div>
