@@ -1,7 +1,19 @@
 .containerSelectors{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 200px;
+    flex-direction: column;
+    max-width: 1200px;
 }
+
+.customComponents{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    gap: 30px;
+}
+
+/*.planSelectContainer{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    width: 200px;*/
+/*    gap: 200px;*/
+/*}*/

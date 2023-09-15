@@ -7,7 +7,6 @@ import ClearIcon from '@mui/icons-material/Clear';
 type DropdownSelectType = {
     placeHolder: string
     option: Array<OptionType>
-    description?: BoardType
     isMulti: boolean
 }
 
@@ -15,7 +14,6 @@ type DropdownSelectType = {
 export const DropdownSelect: React.FC<DropdownSelectType> = ({
                                                                  placeHolder,
                                                                  option,
-                                                                 description,
                                                                  isMulti
                                                              })=> {
 
@@ -109,7 +107,6 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
 
     return (
         <div className={'custom-select'}>
-        <DescriptionDashboard title={description!.title || " "} description={description!.description || " "}/>
 
                 <div className="dropdown-container">
                     <div onClick={handlerInputClick} className="dropdown-input">

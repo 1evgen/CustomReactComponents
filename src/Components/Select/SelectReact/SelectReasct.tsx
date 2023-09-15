@@ -8,11 +8,11 @@ import {BoardType} from "../SelectPalette";
 type DesertListType = 'chocolate' | 'strawberry' | 'vanilla';
 
 type SelectMUIType = {
-    description: BoardType
+
 };
 
 export const SelectReact: React.FC<SelectMUIType> = ({
-                                                         description
+
                                                      }) => {
     const [selectedDesert, setSelectedDesert] = useState<DesertListType>('vanilla');
     const selectDesert = [
@@ -27,7 +27,7 @@ export const SelectReact: React.FC<SelectMUIType> = ({
 
     return (
         <div className={style.reactSelect}>
-            <DescriptionDashboard title={description.title} description={description.description} />
+
             <div className={style.selectWrapper}>
                 <select
                         className={style.select}

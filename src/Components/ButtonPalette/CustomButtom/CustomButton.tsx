@@ -2,7 +2,7 @@ import React, {ReactNode} from "react"
 import {sizeButtons} from "../ButtonPalette";
 import styleSize from '../DashboardWithButtons/ButtonsSize/ButtonsSize.module.css'
 import styleColor from '../DashboardWithButtons/ButtonsColor/ButtonsColor.module.css'
-import styleIcon from '../IconsButton/iconsButton.module.css'
+
 
 type CustomButtonType = {
     children: ReactNode
@@ -12,8 +12,6 @@ type CustomButtonType = {
     buttonIcon?: string
 
 }
-
-
 
 export const CustomButton: React.FC<CustomButtonType> = ({   children,
                                                              variantSize = sizeButtons.MEDIUM,

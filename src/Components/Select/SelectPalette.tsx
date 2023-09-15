@@ -1,6 +1,7 @@
 import {SelectReact} from "./SelectReact/SelectReasct";
 import {DropdownSelect} from "./CustomeDropdownSelect/DropdownSelect";
 import style from './SelectPalette.module.css'
+import {DescriptionDashboard} from "../../CommonComponents/DescriptionDashboard";
 
 export type OptionType = {
     id: number
@@ -48,17 +49,26 @@ export const SelectPalette = ()=> {
     return (
         <>
         <div className={style.containerSelectors} >
-                <SelectReact description={description.ReactSelect}  />
-                <DropdownSelect placeHolder="Select ..."
-                                option={option}
-                                description={description.CustomSelect}
-                                isMulti={false}
-                />
-                <DropdownSelect placeHolder="Select ..."
-                            option={option}
-                            description={description.CustomMultiSelect}
-                            isMulti={true}
-                />
+            <div >
+                <DescriptionDashboard title={description.ReactSelect.title} description={description.ReactSelect.description}/>
+                <SelectReact />
+            </div>
+                <div className={style.customComponents}>
+
+                    <DescriptionDashboard title={description.CustomSelect.title}
+                                          description={description.CustomSelect.description}/>
+
+                    <div className={style.planSelectContainer}>
+                    <DropdownSelect placeHolder="Select ..."
+                                    option={option}
+                                    isMulti={false}
+                    />
+                    <DropdownSelect placeHolder="Select ..."
+                                    option={option}
+                                    isMulti={true}
+                    />
+                </div>
+                </div>
         </div>
             <div>
 
