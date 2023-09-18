@@ -2,6 +2,7 @@ import {SelectReact} from "./SelectReact/SelectReasct";
 import {DropdownSelect} from "./CustomeDropdownSelect/DropdownSelect";
 import style from './SelectPalette.module.css'
 import {DescriptionDashboard} from "../../CommonComponents/DescriptionDashboard";
+import {CustomButton} from "../ButtonPalette/CustomButtom/CustomButton";
 
 export type OptionType = {
     id: number
@@ -12,12 +13,13 @@ export type OptionType = {
 export type BoardType = {
     title: string
     description: string
+
 }
 
 type DescriptionBoardType = {
     ReactSelect: BoardType
     CustomSelect: BoardType
-    CustomMultiSelect: BoardType
+    ExampleUseSelector: BoardType
 }
 
 export const SelectPalette = ()=> {
@@ -25,15 +27,16 @@ export const SelectPalette = ()=> {
         ReactSelect: {title: 'React select example',
             description:"This is the first step to understanding how a select element works in React."},
         CustomSelect: {
-            title: 'Custom example',
-            description:" This is a relatively simple select. You can select a value, it will be displayed in the window" +
-                "and the selected value will be highlighted"
+            title: 'Custom example ',
+            description:" There are a relatively simple select and Custom multi selector example. You can select a value," +
+                " it will be displayed in the window  and the selected value will be highlighted. Also " +
+                "A more complex selector that allows you to save the selected value in the window"
         },
-        CustomMultiSelect: {
-            title: 'Custom multi selector example',
-            description:"A more complex selector that allows you to save the selected value in the window," +
-                " after which you can delete unnecessary values"
-        }
+        ExampleUseSelector: {
+            title: 'ExampleUseSelector ',
+            description:"We ara try use Selector for switch some pfoto "
+        },
+
     }
 
     const option = [
@@ -47,14 +50,15 @@ export const SelectPalette = ()=> {
 
 
     return (
-        <>
         <div className={style.containerSelectors} >
+
             <div >
                 <DescriptionDashboard title={description.ReactSelect.title} description={description.ReactSelect.description}/>
                 <SelectReact />
             </div>
-                <div className={style.customComponents}>
 
+
+                <div className={style.customComponents}>
                     <DescriptionDashboard title={description.CustomSelect.title}
                                           description={description.CustomSelect.description}/>
 
@@ -69,10 +73,13 @@ export const SelectPalette = ()=> {
                     />
                 </div>
                 </div>
-        </div>
-            <div>
+
+            <div className={style.useSelectExample}>
+                    <DescriptionDashboard title={description.ExampleUseSelector.title}
+                                          description={description.ExampleUseSelector.description}/>
+                    <DropdownSelect placeHolder={'photo'} option={option} isMulti={false} />
 
             </div>
-        </>
+        </div>
     )
 }

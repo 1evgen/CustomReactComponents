@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import "./DropdownSelect.css";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import {BoardType, OptionType} from "../SelectPalette";
-import {DescriptionDashboard} from "../../../CommonComponents/DescriptionDashboard";
+import {OptionType} from "../SelectPalette";
+
 import ClearIcon from '@mui/icons-material/Clear';
 type DropdownSelectType = {
     placeHolder: string
@@ -103,7 +103,6 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
         }
         return (!Array.isArray(selectedValue) && selectedValue.value === option.value)
     }
-
 
     return (
         <div className={'custom-select'}>
