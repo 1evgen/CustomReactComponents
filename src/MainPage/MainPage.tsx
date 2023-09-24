@@ -10,16 +10,18 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import {ButtonPalette} from "../Components/ButtonPalette/ButtonPalette";
+import {ButtonPalette} from "Components/ButtonPalette/ButtonPalette";
 import s from './mainPage.module.css'
 import {ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
 import {Link, Navigate, Route, Routes} from "react-router-dom";
-import {Preview} from "../Components/Preview/Preview";
+import {Preview} from "Components/Preview/Preview";
 import {AppBar, drawerWidth, DrawerHeader, Main} from "./StylesForAppBar";
 import CottageIcon from '@mui/icons-material/Cottage';
 import SmartButtonIcon from '@mui/icons-material/SmartButton';
-import {SelectPalette} from "../Components/Select/SelectPalette";
+import {SelectPalette} from "Components/Select/SelectPalette";
 import GradingIcon from '@mui/icons-material/Grading';
+import {ErrorPage} from "Router/error-page";
+
 
 export default function MainPage() {
     const theme = useTheme();
@@ -107,6 +109,7 @@ export default function MainPage() {
                     <Route path={'/preview'} element={<Preview/>}/>
                     <Route path={'/ButtonPalette'} element={<ButtonPalette />}/>
                     <Route path={'/select'} element={<SelectPalette />}/>
+                    <Route path={'*'} element={<ErrorPage />}/>
                 </Routes>
             </Main>
         </Box>

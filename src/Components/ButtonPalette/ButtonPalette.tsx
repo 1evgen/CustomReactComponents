@@ -60,9 +60,9 @@ export const ButtonPalette = () => {
             {nameButton: 'basket', size: sizeButtons.MEDIUM, icon_img: basket, color: 'iconStyle', disabled: true},
         ],
          'iconSize': [
-             {nameButton: 'basket', size: sizeButtons.SMALL, icon_img: basket, color: 'iconStyle'},
-             {nameButton:'basket', size: sizeButtons.MEDIUM, icon_img: basket, color: "iconStyle" },
-             {nameButton:'basket', size: sizeButtons.LARGE, icon_img: basket, color: "iconStyle"},
+             {nameButton: 'basket_small', size: sizeButtons.SMALL, icon_img: basket, color: 'iconStyle'},
+             {nameButton:'basket_middle', size: sizeButtons.MEDIUM, icon_img: basket, color: "iconStyle" },
+             {nameButton:'basket_large', size: sizeButtons.LARGE, icon_img: basket, color: "iconStyle"},
          ]
 
     }

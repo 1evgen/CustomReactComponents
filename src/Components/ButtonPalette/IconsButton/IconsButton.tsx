@@ -23,8 +23,8 @@ export const IconsButton: React.FC<IconsButtonType> = ({
             </div>
             <div className={commonStyle.containerButtons}>
                 {
-                    propertiesButtons['icon'].map(button =>
-                        <CustomButton key={button.nameButton}
+                    propertiesButtons['icon'].map((button, index) =>
+                        <CustomButton key={button.nameButton + index}
                                       variantColor={button.color}
                                       variantSize={button.size}
                                       disabled={button.disabled}

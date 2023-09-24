@@ -22,8 +22,8 @@ export const SizeIcons: React.FC<ButtonsColorType> = ({
                 <p className={commonStyle.description}>{attributes.descriptions}</p>
             </div>
             <div className={commonStyle.containerButtons}>
-                {propertiesButtons['iconSize'].map(buttons =>
-                    <CustomButton key={buttons.nameButton}
+                {propertiesButtons['iconSize'].map((buttons, index) =>
+                    <CustomButton key={buttons.nameButton + index}
                                   variantColor={buttons.color}
                                   variantSize={buttons.size}
                                   disabled={buttons.disabled}
