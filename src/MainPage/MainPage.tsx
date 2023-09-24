@@ -13,7 +13,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import {ButtonPalette} from "Components/ButtonPalette/ButtonPalette";
 import s from './mainPage.module.css'
 import {ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
-import {Link, Navigate, Route, Routes} from "react-router-dom";
+import {Link, Navigate, Outlet, Route, Routes} from "react-router-dom";
 import {Preview} from "Components/Preview/Preview";
 import {AppBar, drawerWidth, DrawerHeader, Main} from "./StylesForAppBar";
 import CottageIcon from '@mui/icons-material/Cottage';
@@ -104,13 +104,7 @@ export default function MainPage() {
                 </List>
             </Drawer>
             <Main className={s.mainStyle} open={open}>
-                <Routes>
-                    <Route path={'/'} element={<Navigate to={'/preview'}/>}/>
-                    <Route path={'/preview'} element={<Preview/>}/>
-                    <Route path={'/ButtonPalette'} element={<ButtonPalette />}/>
-                    <Route path={'/select'} element={<SelectPalette />}/>
-                    <Route path={'*'} element={<ErrorPage />}/>
-                </Routes>
+                <Outlet />
             </Main>
         </Box>
     );

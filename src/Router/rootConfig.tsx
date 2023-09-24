@@ -4,28 +4,35 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import "./index.css";
-import {Preview} from "../Components/Preview/Preview";
-import {ButtonPalette} from "../Components/ButtonPalette/ButtonPalette";
-import {SelectPalette} from "../Components/Select/SelectPalette";
+import {Preview} from "Components/Preview/Preview";
+import {ButtonPalette} from "Components/ButtonPalette/ButtonPalette";
+import {SelectPalette} from "Components/Select/SelectPalette";
+import MainPage from "MainPage/MainPage";
+import {ErrorPage} from "Router/error-page";
 
 
 
-
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
     {
-        path: "/preview",
-        element: <Preview />,
-    },
+        path: '/',
+        element: <MainPage />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "/preview",
+                element: <Preview />,
+            },
 
-    {
-        path: "/ButtonPalette",
-        element: <ButtonPalette />,
-    },
-    {
-        path: "/select",
-        element: <SelectPalette />,
-    },
+            {
+                path: "/ButtonPalette",
+                element: <ButtonPalette />,
+            },
+            {
+                path: "/select",
+                element: <SelectPalette />,
+            },
+        ]
+    }
 ]);
 
 
