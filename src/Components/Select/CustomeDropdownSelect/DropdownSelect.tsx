@@ -2,16 +2,18 @@ import React, {useEffect, useState} from "react";
 import "./DropdownSelect.css";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {OptionType} from "../SelectPalette";
-
 import ClearIcon from '@mui/icons-material/Clear';
 type DropdownSelectType = {
     placeHolder: string
-    option: Array<OptionType>
+    // option?: Array<OptionType>
+    option: any
     isMulti: boolean
+    onChange?: (selectedOption: any )=> void
 }
 
 
 export const DropdownSelect: React.FC<DropdownSelectType> = ({
+                                                                 onChange,
                                                                  placeHolder,
                                                                  option,
                                                                  isMulti
@@ -19,7 +21,6 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
 
     const [showMenu, setShowMenu] = useState(false)
     const [selectedValue, setSelectedValue]= useState<OptionType | null | OptionType[] >(isMulti ? [] : null)
-
     // left click anywhere and the list will be hidden
     useEffect(()=> {
         const handler = ()=> setShowMenu(false)
@@ -28,7 +29,6 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
             window.removeEventListener("click", handler)
         }
     },[showMenu])
-
 
     // open & close menu list
     const handlerInputClick = (e: React.MouseEvent<HTMLDivElement>)=> {
@@ -73,7 +73,6 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
         return !Array.isArray(selectedValue) && selectedValue.label;
     }
     // set element in select
-
     const onItemClick = (option: OptionType) => {
         let newValue: any;
         if (isMulti) {
@@ -89,6 +88,9 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
             }
         } else {
             newValue = option;
+        }
+        if (onChange){
+            onChange(newValue)
         }
         setSelectedValue(newValue);
     };
@@ -118,7 +120,7 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
                     </div>
                     {showMenu &&
                         <div className={"dropdown-menu"}>
-                            {option.map((option) => (
+                            {option.map((option: any) => (
                                 <div key={option.id}
                                      className={`dropdown-item ${isSelected(option) && "selected"}`}
                                      onClick={() => onItemClick(option)}

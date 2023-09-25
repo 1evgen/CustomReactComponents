@@ -30,10 +30,10 @@ export interface ButtonsArrays {
 }
 
 export const ButtonPalette = () => {
-    const descriptionSizesButton = 'The dashboard shows how will change size buttons depend on props.'
+    const descriptionSizesButton =  'The dashboard shows how will change size buttons depend on props.'
     const descriptionColorsButton = 'This dashboard shows buttons that demonstrate the color palette of the buttons.' +
                                     ' The buttons will have the following styles: primary,secondary,error, disabled'
-    const descriptionIconsButton = "This dashboard contains buttons in the form of icons: basket, calendar, bacteria." +
+    const descriptionIconsButton =  "This dashboard contains buttons in the form of icons: basket, calendar, bacteria." +
                                     "Buttons change in size depending on props."
     const descriptionIconsSize =    "The dashboard shows, using the cart icon as an example, how the size of the icon " +
                                     "changes depending on the props"
@@ -66,6 +66,7 @@ export const ButtonPalette = () => {
          ]
 
     }
+
     return (
         <div className={style.CommonPalette}>
             <ButtonsSize propertiesButtons={propertiesButtons}
@@ -85,7 +86,6 @@ export const ButtonPalette = () => {
                          descriptions={descriptionIconsSize}
                          propertiesButtons={propertiesButtons} />
         </div>
-
 
     )
 }

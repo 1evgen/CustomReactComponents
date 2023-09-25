@@ -2,9 +2,7 @@
 .CommonPalette{
     display: flex;
     flex-direction: column;
-    /*border-bottom: 1px solid black;*/
     align-items: center;
-
 }
 
 .dashboard{
@@ -12,24 +10,27 @@
     flex-direction: column;
     align-items: center;
 }
+
 .InfoDashboard{
     display: flex;
     flex-direction: column;
 }
 .titleDashboard{
-   margin: 0 auto;
+    background-image: linear-gradient(90deg, #04c748, #5d94ff);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0 auto;
 }
 .description{
-
+  font-size: 15px;
 }
 .containerButtons{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    border: 1px solid black;
     max-width: 1200px;
     width: 100%;
-    min-height: 150px;
-    margin-bottom: 150px;
+    min-height: 120px;
+    margin-bottom: 120px;
 }

@@ -3,8 +3,6 @@ import React from "react";
 import  commonStyle from '../../buttonPallette.module.css'
 import {ButtonsArrays} from "../../ButtonPalette";
 
-
-
 type  ButtonsSizeType = {
     propertiesButtons: ButtonsArrays
     header: string

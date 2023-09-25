@@ -1,8 +1,9 @@
 import {SelectReact} from "./SelectReact/SelectReasct";
 import {DropdownSelect} from "./CustomeDropdownSelect/DropdownSelect";
 import style from './SelectPalette.module.css'
-import {DescriptionDashboard} from "../../CommonComponents/DescriptionDashboard";
-import {CustomButton} from "../ButtonPalette/CustomButtom/CustomButton";
+import {DescriptionDashboard} from "CommonComponents/DescriptionDashboard";
+import {Photo} from "@mui/icons-material";
+import {ExampleUseSelect} from "Components/Select/ExampleUseSelect/ExampleUseSelect";
 
 export type OptionType = {
     id: number
@@ -15,7 +16,6 @@ export type BoardType = {
     description: string
 
 }
-
 type DescriptionBoardType = {
     ReactSelect: BoardType
     CustomSelect: BoardType
@@ -38,16 +38,14 @@ export const SelectPalette = ()=> {
         },
 
     }
-
     const option = [
-        { id: 1, value: 'chocolate', label: 'Chocolate' },
-        { id: 2, value: 'strawberry', label: 'Strawberry' },
+        { id: 1, value: 'Orange', label: 'Chocolate' },
+        { id: 2, value: 'Apple', label: 'Strawberry' },
         { id: 3, value: 'vanilla', label: 'Vanilla' },
         { id: 4, value: 'ice-cream', label: 'Ice-cream' },
         { id: 5, value: 'cake', label: 'Cake' },
         { id: 6, value: 'cola', label: 'Cola' },
     ]
-
 
     return (
         <div className={style.containerSelectors} >
@@ -78,6 +76,7 @@ export const SelectPalette = ()=> {
                     <DescriptionDashboard title={description.ExampleUseSelector.title}
                                           description={description.ExampleUseSelector.description}/>
                     <DropdownSelect placeHolder={'photo'} option={option} isMulti={false} />
+                    <ExampleUseSelect />
 
             </div>
         </div>

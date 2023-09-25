@@ -13,7 +13,9 @@
     border: 1px solid #ccc;
     position: relative;
     border-radius: 5px;
-    width: 70%;
+    /*width: 50%;*/
+
+    background-color: white;
 }
 
 .dropdown-input {
@@ -22,7 +24,8 @@
     align-items: center;
     justify-content: space-between;
     user-select: none;
-    min-width: 200px;
+    width: 150px;
+
 }
 
 .dropdown-tool{
@@ -34,7 +37,6 @@
     position: absolute;
     /*transform: translate(3px);*/
     width: 100%;
-
     border: 1px solid #ccc;
     border-radius: 5%;
     overflow: auto;

@@ -1,6 +1,26 @@
 .previewStyle{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    height: 100vh; /* Устанавливаем высоту в 100vh */
+    background: url("https://www.toptal.com/designers/subtlepatterns/uploads/blue-snow.png");
+}
+
+.helloText{
+    text-align: justify;
+    text-decoration: solid;
+    font-weight: bold;
+}
+
+.header{
+    background-image: linear-gradient(90deg, #04c748, #5d94ff);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.helloText{
+    font-size: 20px;
+    color: #413e3e;
+    font-family: "PT Sans";
 }
