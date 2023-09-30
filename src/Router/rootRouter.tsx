@@ -11,7 +11,6 @@ import MainPage from "MainPage/MainPage";
 import {ErrorPage} from "Router/error-page";
 
 
-
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -19,10 +18,13 @@ export const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             {
+                path: '', // Пустой путь, который будет соответствовать по умолчанию
+                element: <Preview />,
+            },
+            {
                 path: "/preview",
                 element: <Preview />,
             },
-
             {
                 path: "/ButtonPalette",
                 element: <ButtonPalette />,
@@ -34,8 +36,6 @@ export const router = createBrowserRouter([
         ]
     }
 ]);
-
-
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
         <RouterProvider router={router} />

@@ -4,11 +4,10 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {OptionType} from "../SelectPalette";
 import ClearIcon from '@mui/icons-material/Clear';
 type DropdownSelectType = {
-    placeHolder: string
-    // option?: Array<OptionType>
-    option: any
-    isMulti: boolean
-    onChange?: (selectedOption: any )=> void
+        placeHolder?: string
+        option?: Array<OptionType>
+        isMulti: boolean
+        onChange?: (selectedOption: any )=> void
 }
 
 
@@ -120,7 +119,7 @@ export const DropdownSelect: React.FC<DropdownSelectType> = ({
                     </div>
                     {showMenu &&
                         <div className={"dropdown-menu"}>
-                            {option.map((option: any) => (
+                            {option?.map((option) => (
                                 <div key={option.id}
                                      className={`dropdown-item ${isSelected(option) && "selected"}`}
                                      onClick={() => onItemClick(option)}

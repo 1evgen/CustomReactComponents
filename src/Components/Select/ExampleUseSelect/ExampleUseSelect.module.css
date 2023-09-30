@@ -1,7 +1,22 @@
 
 .wrapperExampleSelect{
     display: flex;
-    border: 1px solid black;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+}
 
-    margin-left: 50px ;
+.containerPhoto{
+    display: flex;
+    max-width: 300px;
+}
+
+
+@media  (min-width: 380px) and (max-width: 490px) {
+    .wrapperExampleSelect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
 }

@@ -9,14 +9,12 @@ type DescriptionDashboardType = {
 
 export const DescriptionDashboard = (props: DescriptionDashboardType)=> {
     return (
-    <div>
             <div className={style.selectContainer}>
                 <div className={style.description}>
                     <h3>{props.title}</h3>
                     <p>{props.description}</p>
 
                 </div>
-        </div>
         </div>
     )
 }

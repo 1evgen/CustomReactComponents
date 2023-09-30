@@ -1,17 +1,21 @@
-html {
-    box-sizing: border-box;
-
-}
-
+html {box-sizing: border-box;}
 *,
 *::after,
 *::before {
-    /*box-sizing: inherit;*/
-    /*margin: 0px;*/
+    box-sizing: inherit;
+    margin: 0;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+p {
+    text-indent: 2em;
+}
+.red-text {
+    text-align: justify;
 }
 
 .App{
     background: url("https://www.toptal.com/designers/subtlepatterns/uploads/blue-snow.png");
-
 }
 /*"https://www.toptal.com/designers/subtlepatterns/uploads/cloudy-day.png"*/
