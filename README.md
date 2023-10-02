@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+<br> _"All you frontend folks do is paint buttons."_ </br>
+<br> _~~Backend developer~~_</br>
+<br> -_Jason Statham_-</br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CustomReactComponents
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+Currently, there are many libraries that provide various components for use in development. This project is aimed at creating custom user components to gain a deeper understanding of the process of creating them. I strive to develop complex, reusable, and multifunctional components with unique designs. The header panel and navigation menu are implemented using the Material-UI (MUI) library.
 
-### `yarn start`
+This project focuses on refining the details and is intended for engaging learning rather than creating a library of components!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Goal
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The project's goal is to create custom components that can be reused in other places.
 
-### `yarn test`
+## Implemented Components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Button
+- Select
+Implemented Components
+## Custom Button
+The custom button provides the following parameters:
 
-### `yarn build`
+- **variantSize**: A parameter for setting the button's size.
+- **variantColor**: A parameter for setting the button's color.
+- **disabled**: Allows you to set the button to a "disabled" state.
+- **buttonIcon**: A parameter for adding an icon to the button.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Custom Select
+The custom select allows adding multiple options to the select body. This component allows you to create a dropdown list with multiple choice options.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Planned Components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Login Form
+- Payment Card Form
+- Switch
+- Rating
 
-### `yarn eject`
+## Planned Animated Elements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technologies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React**: The primary tool for creating components and user interfaces.
+- **TypeScript**: Used to improve code typing and ensure code safety.
+- **Material-UI (MUI)**: Used for creating stylish components and interface elements.
+- **React Router**: Used for managing navigation in the application.
