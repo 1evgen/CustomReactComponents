@@ -1,10 +1,10 @@
 <br> _"All you frontend folks do is paint buttons."_ </br>
-<br> _~~Backend developer~~_</br>
+<br> _~~-Backend developer-~~_</br>
 <br> -_Jason Statham_-</br>
 
-<img src="SteveJ.png" alt="_Jason" width="90" height="70">
+<img src="Statham.png" alt="_Jason" width="120" height="70">
 
-# CustomReactComponents
+# Custom React Components
 
 ## Project Description
 
