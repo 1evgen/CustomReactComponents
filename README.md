@@ -2,6 +2,8 @@
 <br> _~~Backend developer~~_</br>
 <br> -_Jason Statham_-</br>
 
+<img src="SteveJ.png" alt="_Jason" width="90" height="70">
+
 # CustomReactComponents
 
 ## Project Description
@@ -47,3 +49,4 @@ The custom select allows adding multiple options to the select body. This compon
 - **TypeScript**: Used to improve code typing and ensure code safety.
 - **Material-UI (MUI)**: Used for creating stylish components and interface elements.
 - **React Router**: Used for managing navigation in the application.
+### The deployed project can be found at the following link: ...   
