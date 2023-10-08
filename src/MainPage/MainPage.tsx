@@ -16,8 +16,9 @@ import {Link, Navigate, Outlet, Route, Routes} from "react-router-dom";
 import {AppBar, drawerWidth, DrawerHeader, Main} from "./StylesForAppBar";
 import CottageIcon from '@mui/icons-material/Cottage';
 import SmartButtonIcon from '@mui/icons-material/SmartButton';
-
+import ThumbsUpDownTwoToneIcon from '@mui/icons-material/ThumbsUpDownTwoTone';
 import GradingIcon from '@mui/icons-material/Grading';
+import {CustomRating} from "Components/CustomeRating/CustomRating";
 
 
 
@@ -94,6 +95,16 @@ export default function MainPage() {
                                 <GradingIcon/>
                             </ListItemIcon>
                             <ListItemText primary='Select'/>
+                        </ListItemButton>
+                    </Link>
+                </List>
+                <List>
+                    <Link className={s.links} to={'/rating'}>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <ThumbsUpDownTwoToneIcon />
+                            </ListItemIcon>
+                            <ListItemText primary='CustomRating'/>
                         </ListItemButton>
                     </Link>
                 </List>

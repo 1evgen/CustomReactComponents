@@ -1,0 +1,17 @@
+.StylesBody{
+    color: #413e3e;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.stars{
+    background-color: transparent;
+}
+
+.isColorStar * {
+    fill: gold;
+}
+
+.notColorStar{
+    fill: white;
+}

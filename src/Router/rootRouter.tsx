@@ -9,6 +9,7 @@ import {ButtonPalette} from "Components/ButtonPalette/ButtonPalette";
 import {SelectPalette} from "Components/Select/SelectPalette";
 import MainPage from "MainPage/MainPage";
 import {ErrorPage} from "Router/error-page";
+import {CustomRating} from "Components/CustomeRating/CustomRating";
 
 
 export const router = createBrowserRouter([
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
                 path: "/select",
                 element: <SelectPalette />,
             },
+            {
+                path: '/rating',
+                element: <CustomRating />
+            }
         ]
     }
 ]);
