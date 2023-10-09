@@ -1,17 +1,61 @@
 .StylesBody{
-    color: #413e3e;
-    padding: 10px;
     border: 1px solid black;
 }
 
+
+.starContainer{
+    cursor: pointer;
+    display: flex;
+
+}
+
 .stars{
-    background-color: transparent;
+    width: 25px;
+    height: 25px;
+
 }
 
 .isColorStar * {
+    color: #413e3e;
     fill: gold;
 }
 
-.notColorStar{
-    fill: white;
+.isNotColorStar * {
+    fill: #b4b3b3;
+}
+
+.grade{
+    margin-left: 10px;
+    cursor: text;
+}
+
+
+/*@keyframes bounce {*/
+/*    0%, 100% {*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*    50% {*/
+/*        transform: translateY(-10px);*/
+/*    }*/
+/*}*/
+
+/*!* Применяем анимацию к выбранным звездам *!*/
+/*.isColorStar.bounce > .stars {*/
+/*    animation: bounce 0.5s ease infinite;*/
+/*}*/
+
+@keyframes starSpin {
+    from,
+    20% {
+        transform: rotate(0);
+    }
+    60%,
+    to {
+        transform: rotate(144deg);
+    }
+}
+
+/* Применяем анимацию к выбранным звездам */
+.isColorStar.bounce > .stars {
+    animation: bounce 0.5s ease infinite, starSpin 2s ease infinite;
 }
