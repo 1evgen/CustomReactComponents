@@ -49,4 +49,4 @@ The custom select allows adding multiple options to the select body. This compon
 - **TypeScript**: Used to improve code typing and ensure code safety.
 - **Material-UI (MUI)**: Used for creating stylish components and interface elements.
 - **React Router**: Used for managing navigation in the application.
-### The deployed project can be found at the following link: ...   
+
