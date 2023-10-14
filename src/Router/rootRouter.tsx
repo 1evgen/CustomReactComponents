@@ -1,26 +1,27 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
-    createBrowserRouter,
+     createHashRouter,
     RouterProvider,
 } from "react-router-dom";
 import {Preview} from "Components/Preview/Preview";
 import {ButtonPalette} from "Components/ButtonPalette/ButtonPalette";
 import {SelectPalette} from "Components/Select/SelectPalette";
 import MainPage from "MainPage/MainPage";
-import {ErrorPage} from "Router/error-page";
+import {ErrorPage} from "Router/helper-components/error-page";
 import {CustomRating} from "Components/CustomeRating/CustomRating";
 import {ToggleSwitch} from "Components/ToggleSwitch/ToggleSwitch";
+import {UnderDevelopment} from "Router/helper-components/UnderDevelopment";
 
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: '/',
         element: <MainPage />,
         errorElement: <ErrorPage />,
         children: [
             {
-                path: '', // Пустой путь, который будет соответствовать по умолчанию
+                path: '',
                 element: <Preview />,
             },
             {
@@ -40,8 +41,8 @@ export const router = createBrowserRouter([
                 element: <CustomRating />
             },
             {
-                path: 'ToggleSwitch',
-                element: <ToggleSwitch />
+                path: '/toggleSwitch',
+                element: <UnderDevelopment />
             }
         ]
     }

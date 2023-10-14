@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useMemo, useState} from "react";
+import React, {useCallback, useState} from "react";
 import {Stars} from "Components/CustomeRating/Stars";
 import style from '../CustomeRating/StarsStyle.module.css'
 //import { IconName } from "react-icons/ci";
@@ -12,8 +12,6 @@ export const CustomRating: React.FC = () => {
     const [rating, setRating] = useState<number | null>(null)
     const [commentRating, setCommentRating] = useState<CommentRatingType>('')
     const maxValue = 5;
-
-
 
     const onChangeRating = useCallback( (count: number) => {
         setRating(count)

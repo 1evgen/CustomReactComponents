@@ -55,6 +55,8 @@ export const Stars: React.FC<CustomRatingType> = ({
                         className={activeStar && currentStar <= activeStar ? style.isColorStar : style.isNotColorStar}
                         onMouseOver={() => onFocusForStars(currentStar)}
                         onMouseLeave={() => setActiveStar(value)}
+                        onTouchStart={()=> onFocusForStars(currentStar)}
+                        onTouchEnd={() => setActiveStar(value)}
                         onClick={() => {
                             onChangeRating(currentStar);
                         }}

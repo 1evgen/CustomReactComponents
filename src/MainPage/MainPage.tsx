@@ -110,7 +110,7 @@ export default function MainPage() {
                     </Link>
                 </List>
                 <List>
-                    <Link className={s.links} to={'/ToggleSwitch'}>
+                    <Link className={s.links} to={'/toggleSwitch'}>
                         <ListItemButton>
                             <ListItemIcon>
                                 <ToggleOffIcon />
@@ -121,7 +121,7 @@ export default function MainPage() {
                 </List>
             </Drawer>
             <Main className={s.mainStyle} open={open}>
-                <Outlet />
+                <Outlet  />
             </Main>
         </Box>
     );

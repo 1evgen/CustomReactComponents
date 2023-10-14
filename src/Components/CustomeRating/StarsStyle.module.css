@@ -29,21 +29,6 @@
     cursor: text;
 }
 
-
-/*@keyframes bounce {*/
-/*    0%, 100% {*/
-/*        transform: translateY(0);*/
-/*    }*/
-/*    50% {*/
-/*        transform: translateY(-10px);*/
-/*    }*/
-/*}*/
-
-/*!* Применяем анимацию к выбранным звездам *!*/
-/*.isColorStar.bounce > .stars {*/
-/*    animation: bounce 0.5s ease infinite;*/
-/*}*/
-
 @keyframes starSpin {
     from,
     20% {
