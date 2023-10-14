@@ -12,13 +12,14 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import s from './mainPage.module.css'
 import {ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
-import {Link, Navigate, Outlet, Route, Routes} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 import {AppBar, drawerWidth, DrawerHeader, Main} from "./StylesForAppBar";
 import CottageIcon from '@mui/icons-material/Cottage';
 import SmartButtonIcon from '@mui/icons-material/SmartButton';
 import ThumbsUpDownTwoToneIcon from '@mui/icons-material/ThumbsUpDownTwoTone';
 import GradingIcon from '@mui/icons-material/Grading';
-import {CustomRating} from "Components/CustomeRating/CustomRating";
+import ToggleOffIcon from '@mui/icons-material/ToggleOff';
+import {ToggleSwitch} from "Components/ToggleSwitch/ToggleSwitch";
 
 
 
@@ -104,7 +105,17 @@ export default function MainPage() {
                             <ListItemIcon>
                                 <ThumbsUpDownTwoToneIcon />
                             </ListItemIcon>
-                            <ListItemText primary='CustomRating'/>
+                            <ListItemText primary='Custom Rating'/>
+                        </ListItemButton>
+                    </Link>
+                </List>
+                <List>
+                    <Link className={s.links} to={'/ToggleSwitch'}>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <ToggleOffIcon />
+                            </ListItemIcon>
+                            <ListItemText primary='Custom Toggle Switch'/>
                         </ListItemButton>
                     </Link>
                 </List>

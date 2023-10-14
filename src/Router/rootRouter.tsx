@@ -10,6 +10,7 @@ import {SelectPalette} from "Components/Select/SelectPalette";
 import MainPage from "MainPage/MainPage";
 import {ErrorPage} from "Router/error-page";
 import {CustomRating} from "Components/CustomeRating/CustomRating";
+import {ToggleSwitch} from "Components/ToggleSwitch/ToggleSwitch";
 
 
 export const router = createBrowserRouter([
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
             {
                 path: '/rating',
                 element: <CustomRating />
+            },
+            {
+                path: 'ToggleSwitch',
+                element: <ToggleSwitch />
             }
         ]
     }
