@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CustomReactComponents/static/css/main.46db9739.css",
-    "main.js": "/CustomReactComponents/static/js/main.342ce7f2.js",
+    "main.js": "/CustomReactComponents/static/js/main.494af39b.js",
     "static/media/strawberry.png": "/CustomReactComponents/static/media/strawberry.4cce4b1288564383fe50.png",
     "static/media/orange.png": "/CustomReactComponents/static/media/orange.e3a3c2382483a2c2a73f.png",
     "static/media/pear.png": "/CustomReactComponents/static/media/pear.a1e1b68cc7d929d9cc76.png",
@@ -11,10 +11,10 @@
     "static/media/calendar.svg": "/CustomReactComponents/static/media/calendar.3dc60cfad67cc48d0404a35476103b38.svg",
     "static/media/basket.svg": "/CustomReactComponents/static/media/basket.50b42d41c266049fd249c0f076a8c4fb.svg",
     "main.46db9739.css.map": "/CustomReactComponents/static/css/main.46db9739.css.map",
-    "main.342ce7f2.js.map": "/CustomReactComponents/static/js/main.342ce7f2.js.map"
+    "main.494af39b.js.map": "/CustomReactComponents/static/js/main.494af39b.js.map"
   },
   "entrypoints": [
     "static/css/main.46db9739.css",
-    "static/js/main.342ce7f2.js"
+    "static/js/main.494af39b.js"
   ]
 }
