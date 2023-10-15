@@ -20,13 +20,11 @@ export const Stars: React.FC<CustomRatingType> = ({
                                                   }) => {
     const [activeStar, setActiveStar] = useState<number | null>(null);
 
-    /// functions for choose stars
     const onFocusForStars = useCallback((currentStar: number) => {
         setActiveStar(currentStar);
     }, [activeStar]);
 
     useEffect(() => {
-        // Функция для применения анимации к звездам по их id
         function applyAnimationById(id: string) {
             const star = document.getElementById(id);
             if (star) {
@@ -36,7 +34,6 @@ export const Stars: React.FC<CustomRatingType> = ({
                 }, 1000);
             }
         }
-        // Если value изменилось, применяем анимацию
         if (value !== null) {
             for (let i = 1; i <= value; i++) {
                 applyAnimationById(`star-${i}`);
@@ -55,11 +52,9 @@ export const Stars: React.FC<CustomRatingType> = ({
                         className={activeStar && currentStar <= activeStar ? style.isColorStar : style.isNotColorStar}
                         onMouseOver={() => onFocusForStars(currentStar)}
                         onMouseLeave={() => setActiveStar(value)}
-                        onTouchStart={()=> onFocusForStars(currentStar)}
-                        onTouchEnd={() => setActiveStar(value)}
-                        onClick={() => {
-                            onChangeRating(currentStar);
-                        }}
+                        onClick={() => {onChangeRating(currentStar)}
+
+                    }
                     >
             {<IoMdStar className={style.stars} />}
           </span>

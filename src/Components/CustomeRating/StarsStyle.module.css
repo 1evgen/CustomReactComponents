@@ -1,18 +1,14 @@
 .StylesBody{
     border: 1px solid black;
 }
-
-
 .starContainer{
     cursor: pointer;
     display: flex;
-
 }
 
 .stars{
     width: 25px;
     height: 25px;
-
 }
 
 .isColorStar * {
@@ -40,7 +36,7 @@
     }
 }
 
-/* Применяем анимацию к выбранным звездам */
+
 .isColorStar.bounce > .stars {
     animation: bounce 0.5s ease infinite, starSpin 2s ease infinite;
 }

@@ -1,21 +1,28 @@
 import React, {useCallback, useState} from "react";
 import {Stars} from "Components/CustomeRating/Stars";
-import style from '../CustomeRating/StarsStyle.module.css'
-//import { IconName } from "react-icons/ci";
-// CiFaceFrown CiFaceMeh CiFaceSmile
-
+import s from  './CustomeRating.module.css'
+import {DescriptionDashboard} from "CommonComponents/DescriptionDashboard";
 
 const message = 'oops, maybe there are more stars than statuses. Please add status for your variant'
 export type CommentRatingType = 'Useless' | 'Poor' | 'Ok' | 'Good' | 'Excellent' | typeof message | ''
+
+let description = "Introducing our custom Rating component. It is designed in the form of stars and provides a convenient " +
+    "way to rate and evaluate. " +
+    "The component also includes text messages that inform about the selected rating. If needed, " +
+    "the text messages can be disabled by passing false to the showGrade prop. We've also added animation to the stars, " +
+    "giving them a touch of dynamism and interactivity. Thank you for your attention, and we hope that our component " +
+    "will be valuable for your projects."
+
 
 export const CustomRating: React.FC = () => {
     const [rating, setRating] = useState<number | null>(null)
     const [commentRating, setCommentRating] = useState<CommentRatingType>('')
     const maxValue = 5;
 
-    const onChangeRating = useCallback( (count: number) => {
+
+    const onChangeRating = useCallback((count: number) => {
         setRating(count)
-        switch (count){
+        switch (count) {
             case 1 : {
                 setCommentRating("Useless")
                 break
@@ -36,19 +43,21 @@ export const CustomRating: React.FC = () => {
                 setCommentRating("Excellent")
                 break
             }
-            default: setCommentRating(message)
+            default:
+                setCommentRating(message)
         }
     }, [rating])
 
-        return (
-            <div>
-                <Stars maxValue={maxValue}
-                       onChangeRating={onChangeRating}
-                       value={rating}
-                       showGrade = {true}
-                       comment = {commentRating}
+    return (
+        <div className={s.container}>
+            <DescriptionDashboard title={'Rating Star'} description={description}/>
+            <Stars maxValue={maxValue}
+                   onChangeRating={onChangeRating}
+                   value={rating}
+                   showGrade={true}
+                   comment={commentRating}
 
-                />
-            </div>
-        )
+            />
+        </div>
+    )
 }
