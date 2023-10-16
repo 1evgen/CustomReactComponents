@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/CustomReactComponents/static/css/main.0492ebbc.css",
-    "main.js": "/CustomReactComponents/static/js/main.c19b89dc.js",
-    "static/media/strawberry.png": "/CustomReactComponents/static/media/strawberry.4cce4b1288564383fe50.png",
-    "static/media/orange.png": "/CustomReactComponents/static/media/orange.e3a3c2382483a2c2a73f.png",
-    "static/media/pear.png": "/CustomReactComponents/static/media/pear.a1e1b68cc7d929d9cc76.png",
+    "main.js": "/CustomReactComponents/static/js/main.ac954a4c.js",
     "static/media/apple1.png": "/CustomReactComponents/static/media/apple1.1cce1f2e940c3ad9f437.png",
+    "static/media/strawberry.png": "/CustomReactComponents/static/media/strawberry.44cdc83646b31a6db462.png",
+    "static/media/orange.png": "/CustomReactComponents/static/media/orange.ed92c9e084274e888575.png",
+    "static/media/pear.png": "/CustomReactComponents/static/media/pear.eb8b58e03ee9624a370f.png",
     "static/media/bacteria.svg": "/CustomReactComponents/static/media/bacteria.ef68826c96196b29b550f3f50a2000f5.svg",
     "index.html": "/CustomReactComponents/index.html",
     "static/media/calendar.svg": "/CustomReactComponents/static/media/calendar.3dc60cfad67cc48d0404a35476103b38.svg",
     "static/media/basket.svg": "/CustomReactComponents/static/media/basket.50b42d41c266049fd249c0f076a8c4fb.svg",
     "main.0492ebbc.css.map": "/CustomReactComponents/static/css/main.0492ebbc.css.map",
-    "main.c19b89dc.js.map": "/CustomReactComponents/static/js/main.c19b89dc.js.map"
+    "main.ac954a4c.js.map": "/CustomReactComponents/static/js/main.ac954a4c.js.map"
   },
   "entrypoints": [
     "static/css/main.0492ebbc.css",
-    "static/js/main.c19b89dc.js"
+    "static/js/main.ac954a4c.js"
   ]
 }
