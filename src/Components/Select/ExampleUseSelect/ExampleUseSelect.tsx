@@ -26,6 +26,7 @@ export const ExampleUseSelect = () => {
                 <DropdownSelect onChange={setPhotoHandler}  placeHolder={selectedFruit.label} option={option} isMulti={false} />
             </div>
             <div className={style.containerPhoto}>
+
                 {<img  src={selectedFruit ? selectedFruit.value : '' }
                        alt={selectedFruit?.label || ''} /> }
             </div>

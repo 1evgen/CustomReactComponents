@@ -9,6 +9,7 @@ import MainPage from "MainPage/MainPage";
 import {ErrorPage} from "Router/helper-components/error-page";
 import {CustomRating} from "Components/CustomeRating/CustomRating";
 import {UnderDevelopment} from "Router/helper-components/UnderDevelopment";
+import {CustomForm} from "Components/CustomeForm/CustomForm";
 
 
 export const router = createHashRouter([
@@ -40,6 +41,10 @@ export const router = createHashRouter([
             {
                 path: '/toggleSwitch',
                 element: <UnderDevelopment />
+            },
+            {
+                path: '/forms',
+                element: <CustomForm />
             }
         ]
     }

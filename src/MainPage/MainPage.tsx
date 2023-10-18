@@ -20,7 +20,7 @@ import ThumbsUpDownTwoToneIcon from '@mui/icons-material/ThumbsUpDownTwoTone';
 import GradingIcon from '@mui/icons-material/Grading';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import {ToggleSwitch} from "Components/ToggleSwitch/ToggleSwitch";
-
+import ContactMailIcon from '@mui/icons-material/ContactMail';
 
 
 export default function MainPage() {
@@ -116,6 +116,16 @@ export default function MainPage() {
                                 <ToggleOffIcon />
                             </ListItemIcon>
                             <ListItemText primary='Custom Toggle Switch'/>
+                        </ListItemButton>
+                    </Link>
+                </List>
+                <List>
+                    <Link className={s.links} to={'/forms'}>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <ContactMailIcon />
+                            </ListItemIcon>
+                            <ListItemText primary='Custom Forms'/>
                         </ListItemButton>
                     </Link>
                 </List>
