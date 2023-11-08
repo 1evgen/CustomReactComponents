@@ -10,6 +10,7 @@ import {ErrorPage} from "Router/helper-components/error-page";
 import {CustomRating} from "Components/CustomeRating/CustomRating";
 import {UnderDevelopment} from "Router/helper-components/UnderDevelopment";
 import {CustomForm} from "Components/CustomeForm/CustomForm";
+import {ToggleSwitch} from "../Components/ToggleSwitch/ToggleSwitch";
 
 
 export const router = createHashRouter([
@@ -40,7 +41,8 @@ export const router = createHashRouter([
             },
             {
                 path: '/toggleSwitch',
-                element: <UnderDevelopment />
+                // element: <UnderDevelopment />
+                element: <ToggleSwitch/>
             },
             {
                 path: '/forms',
